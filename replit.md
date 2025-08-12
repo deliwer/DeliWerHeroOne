@@ -19,6 +19,15 @@ Preferred communication style: Simple, everyday language.
 - **Navigation Updates**: Added Community and Delivery sections to main navigation
 - **Real-time Features**: Live impact stats, leaderboard updates, and tracking simulation
 
+### Shopify Hydrogen Integration & Product Expansion
+- **Vercel Deployment**: Added vercel.json configuration for production deployment
+- **Shopify Integration**: Created shopify.app.toml for Hydrogen framework compatibility
+- **Product Catalog**: Built comprehensive /products page with iPhone preowned models, premium water, Kangen systems
+- **E-commerce CTAs**: Updated all order buttons to link to www.deliwer.com/products/aquacafe for AED 99 pricing
+- **Product Categories**: AquaCafe water systems, certified iPhone preowned, Icelandic premium water, Kangen delivery/installation
+- **Legal Pages**: Added Privacy Policy, Terms of Service, and Environmental Impact pages
+- **Multi-platform Support**: Added Netlify configuration for alternative deployment options
+
 ## System Architecture
 
 ### Frontend Architecture

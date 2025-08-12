@@ -6,6 +6,7 @@ export function Navigation() {
 
   const navItems = [
     { path: "/", label: "Trade iPhone", id: "trade" },
+    { path: "/products", label: "Shop", id: "products" },
     { path: "/aquacafe", label: "AquaCafe", id: "aquacafe" },
     { path: "/leaderboard", label: "Heroes", id: "heroes" },
     { path: "/community", label: "Community", id: "community" },

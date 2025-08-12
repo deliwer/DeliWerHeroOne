@@ -651,21 +651,25 @@ export default function AquaCafe() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => handleOrderNow("premium")}
-              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black px-12 py-4 rounded-xl font-bold text-xl transform hover:scale-105 transition-all"
+            <a 
+              href="https://www.deliwer.com/products/aquacafe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black px-12 py-4 rounded-xl font-bold text-xl transform hover:scale-105 transition-all"
               data-testid="button-order-hero"
             >
               <Target className="mr-2 w-6 h-6" />
-              ORDER HERO EDITION NOW
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-2 border-hero-green-500 text-hero-green-500 hover:bg-hero-green-500 hover:text-white px-12 py-4 rounded-xl font-bold text-xl transition-all"
+              ORDER AQUACAFE - AED 99
+            </a>
+            <a 
+              href="https://wa.me/971523946311"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center border-2 border-hero-green-500 text-hero-green-500 hover:bg-hero-green-500 hover:text-white px-12 py-4 rounded-xl font-bold text-xl transition-all"
               data-testid="button-chat-hero"
             >
               💬 CHAT WITH HERO CONCIERGE
-            </Button>
+            </a>
           </div>
           
           <p className="text-gray-400 text-sm mt-6">

@@ -16,6 +16,7 @@ import Community from "@/pages/community";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Environmental from "@/pages/environmental";
+import Products from "@/pages/products";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/environmental" component={Environmental} />
+      <Route path="/products" component={Products} />
       <Route component={NotFound} />
     </Switch>
   );
