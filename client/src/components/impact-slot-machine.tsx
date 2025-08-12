@@ -77,7 +77,7 @@ export function ImpactSlotMachine({ onJackpot }: ImpactSlotMachineProps) {
   };
 
   return (
-    <section className="py-16 px-4" data-testid="impact-slot-machine">
+    <section className="py-16 px-4 bg-slate-900/95" data-testid="impact-slot-machine">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">

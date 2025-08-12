@@ -94,7 +94,7 @@ export function InstantImpactUnlocks({ calculation, onOrderNow }: InstantImpactU
 
   if (!showUnlocks && !calculation) {
     return (
-      <section className="py-16 px-4 bg-slate-900/30">
+      <section className="py-16 px-4 bg-slate-900/95">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             💥 INSTANT PLANET POWER UNLOCKS
@@ -127,7 +127,7 @@ export function InstantImpactUnlocks({ calculation, onOrderNow }: InstantImpactU
   }
 
   return (
-    <section className="py-16 px-4 bg-slate-900/30" data-testid="instant-unlocks">
+    <section className="py-16 px-4 bg-slate-900/95" data-testid="instant-unlocks">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">

@@ -170,7 +170,7 @@ export default function AquaCafe() {
       </section>
 
       {/* Device Trade-In Section */}
-      <section className="py-16 px-4 bg-slate-900/30" data-testid="trade-in-section">
+      <section className="py-16 px-4 bg-slate-800/50" data-testid="trade-in-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -315,7 +315,7 @@ export default function AquaCafe() {
       <InstantImpactUnlocks calculation={calculation || undefined} onOrderNow={() => handleOrderNow(selectedPlan)} />
 
       {/* Final CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-hero-green-500/10 to-blue-500/10" data-testid="final-cta">
+      <section className="py-16 px-4 bg-slate-800/30" data-testid="final-cta">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             🚀 JOIN 12,000+ DUBAI PLANET HEROES TODAY
