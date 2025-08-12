@@ -81,7 +81,7 @@
   body {
     @apply font-sans antialiased min-h-screen text-white;
     font-family: var(--font-sans);
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 100%);
+    background: linear-gradient(135deg, #0a0f1a 0%, #111827 30%, #1f2937 100%);
   }
 
   /* Custom animations */
