@@ -13,7 +13,7 @@ function LiveChallengeWidget() {
         <Flame className="w-6 h-6 text-red-500 mr-2" />
         LIVE COMMUNITY CHALLENGE
       </h3>
-      
+
       <div className="text-center mb-8">
         <h4 className="text-2xl font-bold text-white mb-2">1 MILLION BOTTLES PREVENTED BY RAMADAN</h4>
         <p className="text-gray-300">Join Dubai's biggest environmental mission</p>
@@ -50,7 +50,7 @@ function LiveChallengeWidget() {
           <div className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></div>
           <span className="text-sm text-gray-300">LIVE: Planet Heroes in Action</span>
         </div>
-        
+
         <div className="space-y-2 text-sm">
           <div className="text-gray-300">🎉 Sarah M. just became Level 2!</div>
           <div className="text-gray-300">🏅 Ahmed K. earned "Water Warrior"</div>
@@ -67,13 +67,13 @@ export default function Home() {
     <div>
       {/* Enhanced Hero Challenge Landing */}
       <HeroChallengeLanding />
-      
+
       {/* Instant Impact Unlocks */}
       <InstantImpactUnlocks />
-      
+
       {/* Interactive Slot Machine */}
       <ImpactSlotMachine />
-      
+
       {/* Leaderboard & Challenge Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
