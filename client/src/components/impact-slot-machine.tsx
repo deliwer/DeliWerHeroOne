@@ -195,7 +195,7 @@ export function ImpactSlotMachine({ onJackpot }: ImpactSlotMachineProps) {
 
         {/* Planet Rescue Progress */}
         <Card className="glass border-slate-600 mt-8" data-testid="planet-rescue-progress">
-          <CardContent className="p-8">
+          <CardContent className="p-8 bg-gradient-to-bl from-slate-800/85 to-slate-900/90 backdrop-blur-sm">
             <h3 className="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
               <TrendingUp className="w-6 h-6 text-hero-green-500 mr-2" />
               🌍 PLANET RESCUE PROGRESS
