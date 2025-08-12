@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(203.8863 88.2845% 53.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211.5789 51.3514% 92.7451%);
+  --accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  
+  /* Custom Dubai Hero Theme Colors */
+  --dubai-blue-50: hsl(214 100% 97%);
+  --dubai-blue-500: hsl(217 91% 60%);
+  --dubai-blue-600: hsl(221 83% 53%);
+  --dubai-blue-700: hsl(224 76% 48%);
+  --dubai-blue-900: hsl(228 84% 26%);
+  
+  --hero-green-500: hsl(158 64% 52%);
+  --hero-green-600: hsl(158 64% 42%);
+  
+  --amber-500: hsl(43 96% 56%);
+  --amber-600: hsl(38 92% 50%);
+  --orange-500: hsl(25 95% 53%);
+  --orange-600: hsl(21 90% 48%);
+  
+  --slate-600: hsl(215 25% 27%);
+  --slate-700: hsl(215 28% 17%);
+  --slate-800: hsl(217 33% 17%);
+  --slate-900: hsl(222 47% 11%);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(203.7736 87.6033% 52.5490%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195.0000 15.3846% 94.9020%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased min-h-screen text-white;
+    font-family: var(--font-sans);
+    background: linear-gradient(to bottom right, var(--slate-900), var(--dubai-blue-700), var(--dubai-blue-500));
+  }
+
+  /* Custom animations */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+  }
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+  }
+  
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 3s infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+  }
+
+  /* Custom gradient backgrounds */
+  .bg-dubai-gradient {
+    background: linear-gradient(to bottom right, var(--dubai-blue-900), var(--dubai-blue-700), var(--dubai-blue-500));
+  }
+  
+  .bg-hero-gradient {
+    background: linear-gradient(to right, var(--hero-green-500), var(--hero-green-600));
+  }
+  
+  .bg-amber-gradient {
+    background: linear-gradient(to right, var(--amber-500), var(--orange-500));
+  }
+
+  /* Glassmorphism effects */
+  .glass {
+    @apply bg-slate-800/60 backdrop-blur-sm border border-slate-600;
+  }
+  
+  .glass-light {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+
+  /* Custom button styles */
+  .btn-hero {
+    @apply bg-hero-green-500 hover:bg-hero-green-600 text-white font-bold transition-all transform hover:scale-105;
+  }
+  
+  .btn-dubai {
+    @apply bg-dubai-blue-600 hover:bg-dubai-blue-700 text-white font-bold transition-all;
+  }
+  
+  .btn-amber {
+    @apply bg-amber-500 hover:bg-amber-600 text-black font-bold transition-all;
+  }
+
+  /* Text glow effects */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .text-hero-glow {
+    text-shadow: 0 0 10px var(--hero-green-500);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dubai-blue-600 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dubai-blue-500;
+  }
+}
+
+@layer utilities {
+  /* Dubai theme colors */
+  .bg-dubai-blue-50 { background-color: var(--dubai-blue-50); }
+  .bg-dubai-blue-500 { background-color: var(--dubai-blue-500); }
+  .bg-dubai-blue-600 { background-color: var(--dubai-blue-600); }
+  .bg-dubai-blue-700 { background-color: var(--dubai-blue-700); }
+  .bg-dubai-blue-900 { background-color: var(--dubai-blue-900); }
+  
+  .bg-hero-green-500 { background-color: var(--hero-green-500); }
+  .bg-hero-green-600 { background-color: var(--hero-green-600); }
+  
+  .bg-amber-500 { background-color: var(--amber-500); }
+  .bg-amber-600 { background-color: var(--amber-600); }
+  .bg-orange-500 { background-color: var(--orange-500); }
+  .bg-orange-600 { background-color: var(--orange-600); }
+  
+  .bg-slate-600 { background-color: var(--slate-600); }
+  .bg-slate-700 { background-color: var(--slate-700); }
+  .bg-slate-800 { background-color: var(--slate-800); }
+  .bg-slate-900 { background-color: var(--slate-900); }
+  
+  /* Text colors */
+  .text-dubai-blue-500 { color: var(--dubai-blue-500); }
+  .text-dubai-blue-600 { color: var(--dubai-blue-600); }
+  .text-hero-green-500 { color: var(--hero-green-500); }
+  .text-hero-green-600 { color: var(--hero-green-600); }
+  .text-amber-500 { color: var(--amber-500); }
+  .text-orange-500 { color: var(--orange-500); }
+  
+  /* Border colors */
+  .border-dubai-blue-500 { border-color: var(--dubai-blue-500); }
+  .border-hero-green-500 { border-color: var(--hero-green-500); }
+  .border-amber-500 { border-color: var(--amber-500); }
+  .border-slate-600 { border-color: var(--slate-600); }
+  .border-slate-700 { border-color: var(--slate-700); }
+}
