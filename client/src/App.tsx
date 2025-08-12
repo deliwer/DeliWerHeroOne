@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { TopBanner } from "@/components/top-banner";
 import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 import Home from "@/pages/home";
 import Leaderboard from "@/pages/leaderboard";
 import ImpactDashboard from "@/pages/impact-dashboard";
@@ -12,6 +13,9 @@ import AquaCafe from "@/pages/aquacafe";
 import Partners from "@/pages/partners";
 import Delivery from "@/pages/delivery";
 import Community from "@/pages/community";
+import Privacy from "@/pages/privacy";
+import Terms from "@/pages/terms";
+import Environmental from "@/pages/environmental";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +28,9 @@ function Router() {
       <Route path="/partners" component={Partners} />
       <Route path="/delivery" component={Delivery} />
       <Route path="/community" component={Community} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/environmental" component={Environmental} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -39,6 +46,7 @@ function App() {
           <main>
             <Router />
           </main>
+          <Footer />
         </div>
         <Toaster />
       </TooltipProvider>
