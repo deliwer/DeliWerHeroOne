@@ -10,6 +10,8 @@ import Leaderboard from "@/pages/leaderboard";
 import ImpactDashboard from "@/pages/impact-dashboard";
 import AquaCafe from "@/pages/aquacafe";
 import Partners from "@/pages/partners";
+import Delivery from "@/pages/delivery";
+import Community from "@/pages/community";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +22,8 @@ function Router() {
       <Route path="/impact" component={ImpactDashboard} />
       <Route path="/aquacafe" component={AquaCafe} />
       <Route path="/partners" component={Partners} />
+      <Route path="/delivery" component={Delivery} />
+      <Route path="/community" component={Community} />
       <Route component={NotFound} />
     </Switch>
   );

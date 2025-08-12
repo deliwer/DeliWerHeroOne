@@ -1,6 +1,7 @@
-import { Handshake, Briefcase, Store, Phone, Mail, Users, TrendingUp, DollarSign, Target } from "lucide-react";
+import { Handshake, Briefcase, Store, Phone, Mail, Users, TrendingUp, DollarSign, Target, Star, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -400,6 +401,12 @@ export default function Partners() {
               
               <h4 className="text-lg font-semibold text-white mb-2">What support do you provide?</h4>
               <p className="text-gray-300 text-sm mb-4">24/7 partner support, marketing materials, training resources, and dedicated account management.</p>
+              
+              <h4 className="text-lg font-semibold text-white mb-2">What territories are available?</h4>
+              <p className="text-gray-300 text-sm mb-4">We cover all Dubai emirates with expansion plans for UAE, Saudi Arabia, and Oman in 2025.</p>
+              
+              <h4 className="text-lg font-semibold text-white mb-2">Do I need experience?</h4>
+              <p className="text-gray-300 text-sm mb-4">No prior experience required. We provide comprehensive training and ongoing support for all partners.</p>
             </div>
             
             <div>
@@ -408,7 +415,56 @@ export default function Partners() {
               
               <h4 className="text-lg font-semibold text-white mb-2">How are commissions paid?</h4>
               <p className="text-gray-300 text-sm mb-4">Weekly payouts via bank transfer or digital wallet. Minimum payout threshold is AED 100.</p>
+              
+              <h4 className="text-lg font-semibold text-white mb-2">What about environmental compliance?</h4>
+              <p className="text-gray-300 text-sm mb-4">All partners receive environmental certification and training to ensure compliance with Dubai Municipality standards.</p>
+              
+              <h4 className="text-lg font-semibold text-white mb-2">Can I work with competitors?</h4>
+              <p className="text-gray-300 text-sm mb-4">Non-compete agreements vary by partnership type. Details provided during the application process.</p>
             </div>
+          </div>
+        </div>
+
+        {/* DeliWer Dawn Integration */}
+        <div className="mt-16 glass rounded-2xl p-8 border border-amber-500/30 bg-gradient-to-br from-amber-500/5 to-orange-500/5" data-testid="deliwerdawn-integration">
+          <div className="text-center mb-8">
+            <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Star className="w-10 h-10 text-black" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">DeliWer Dawn: The Future of Eco-Trade</h2>
+            <Badge className="bg-amber-500/20 text-amber-500 border-amber-500/30 px-4 py-2">
+              COMING Q3 2025
+            </Badge>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center p-6 bg-slate-700/30 rounded-xl border border-amber-500/20">
+              <TrendingUp className="w-8 h-8 text-amber-500 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-white mb-2">AI-Powered Trading</h3>
+              <p className="text-gray-400 text-sm">Machine learning algorithms optimize every trade for maximum environmental and financial impact</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/30 rounded-xl border border-hero-green-500/20">
+              <Users className="w-8 h-8 text-hero-green-500 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-white mb-2">Community Governance</h3>
+              <p className="text-gray-400 text-sm">Community-driven decisions on expansion, partnerships, and environmental initiatives</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/30 rounded-xl border border-dubai-blue-500/20">
+              <Gift className="w-8 h-8 text-dubai-blue-500 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-white mb-2">Token Rewards</h3>
+              <p className="text-gray-400 text-sm">Earn DeliWer tokens for every sustainable action, redeemable for exclusive rewards</p>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-300 mb-6">
+              Early partners get lifetime access to Dawn features and founding member status in our eco-governance system
+            </p>
+            <Button className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black px-8 py-3 font-bold">
+              <Star className="mr-2 w-5 h-5" />
+              Reserve Early Access
+            </Button>
           </div>
         </div>
       </div>
