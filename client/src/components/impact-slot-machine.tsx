@@ -89,7 +89,7 @@ export function ImpactSlotMachine({ onJackpot }: ImpactSlotMachineProps) {
         </div>
 
         <Card className="glass border-slate-600 overflow-hidden">
-          <CardContent className="p-8">
+          <CardContent className="p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/90 backdrop-blur-sm">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center justify-center">
                 <Dices className="w-6 h-6 text-amber-500 mr-2" />
