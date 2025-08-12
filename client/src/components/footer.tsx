@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { 
-  Globe, 
   Phone, 
   Mail, 
   MapPin, 
@@ -20,36 +19,7 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const ecosystemProjects = [
-    {
-      name: "AquaCafe",
-      description: "Premium water filtration systems from iPhone trade-ins",
-      url: "/aquacafe",
-      status: "Live",
-      users: "12,847"
-    },
-    {
-      name: "DeliWer EcoTrade",
-      description: "Sustainable electronics recycling marketplace",
-      url: "/",
-      status: "Live", 
-      users: "8,234"
-    },
-    {
-      name: "DeliWer Recycle",
-      description: "Certified e-waste processing and material recovery",
-      url: "/partners",
-      status: "Live",
-      users: "3,156"
-    },
-    {
-      name: "DeliWer Dawn",
-      description: "Next-gen AI-powered eco-trading platform",
-      url: "/community",
-      status: "Coming Q3 2025",
-      users: "Reserved"
-    }
-  ];
+
 
   const quickLinks = [
     { label: "iPhone Trade Calculator", url: "/" },
@@ -79,7 +49,7 @@ export function Footer() {
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
           
           {/* Brand & Mission */}
           <div className="lg:col-span-1">
@@ -126,42 +96,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* DeliWer Ecosystem */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-hero-green-500" />
-              DeliWer Ecosystem
-            </h3>
-            
-            <div className="space-y-4">
-              {ecosystemProjects.map((project, index) => (
-                <div key={index} className="group">
-                  <Link 
-                    href={project.url}
-                    className="block p-4 bg-slate-800/50 hover:bg-slate-800 rounded-lg transition-all border border-slate-700 hover:border-slate-600"
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <h4 className="font-semibold text-white group-hover:text-hero-green-500 transition-colors">
-                        {project.name}
-                      </h4>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        project.status === 'Live' 
-                          ? 'bg-hero-green-500/20 text-hero-green-500' 
-                          : 'bg-amber-500/20 text-amber-500'
-                      }`}>
-                        {project.status}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-400 mb-2">{project.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500">{project.users} users</span>
-                      <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-hero-green-500 transition-colors" />
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           {/* Quick Navigation */}
           <div>
