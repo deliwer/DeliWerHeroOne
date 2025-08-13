@@ -15,10 +15,10 @@ interface ProductFeatureProps {
 
 function ProductFeature({ icon, title, description }: ProductFeatureProps) {
   return (
-    <div className="text-center p-6 glass rounded-xl border border-slate-600">
+    <div className="text-center p-6 bg-gradient-to-br from-slate-800/80 to-slate-900/90 backdrop-blur-sm rounded-xl border border-slate-600/70 shadow-lg">
       <div className="mb-4">{icon}</div>
-      <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm">{description}</p>
+      <h3 className="text-lg font-bold text-white mb-2 drop-shadow-sm">{title}</h3>
+      <p className="text-gray-200 text-sm leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -29,52 +29,56 @@ export default function AquaCafe() {
 
   const plans = [
     {
-      id: "starter",
-      name: "AquaCafe Starter",
-      price: 299,
-      originalPrice: 399,
+      id: "hero-starter",
+      name: "AquaCafe Hero Starter",
+      price: 999,
+      originalPrice: 1399,
       features: [
-        "Basic water filtration system",
-        "6-month filter supply",
-        "Planet Hero Level 1 status",
-        "500 starter points",
-        "Email support"
-      ],
-      badge: "🌱 ECO STARTER"
-    },
-    {
-      id: "premium",
-      name: "AquaCafe Hero Edition",
-      price: 599,
-      originalPrice: 799,
-      features: [
-        "Premium 5-stage filtration",
+        "Premium 3-stage filtration system",
         "12-month filter supply",
         "Planet Hero Level 2 status",
-        "1500 starter points + 2X multiplier",
-        "Priority phone support",
+        "1000 starter points + Hero multiplier",
+        "Priority support",
+        "Smart monitoring app",
+        "Hero member exclusive badge"
+      ],
+      badge: "🌟 HERO ENTRY"
+    },
+    {
+      id: "hero-premium",
+      name: "AquaCafe Hero Premium",
+      price: 1499,
+      originalPrice: 1999,
+      features: [
+        "Advanced 5-stage filtration",
+        "18-month filter supply",
+        "Planet Hero Level 3 status",
+        "2500 starter points + 2X multiplier",
+        "24/7 priority phone support",
         "Smart water quality monitoring",
-        "Exclusive Hero badge"
+        "Exclusive Hero premium badge",
+        "Free home installation"
       ],
       badge: "⚡ MOST POPULAR",
       popular: true
     },
     {
-      id: "family",
-      name: "AquaCafe Family Guardian",
-      price: 999,
-      originalPrice: 1299,
+      id: "hero-elite",
+      name: "AquaCafe Hero Elite",
+      price: 2299,
+      originalPrice: 2999,
       features: [
-        "Whole-home filtration system",
-        "24-month filter supply",
-        "Planet Hero Level 3 status",
-        "3000 starter points + 3X multiplier",
-        "24/7 VIP support",
-        "Smart home integration",
-        "Family protection badges",
-        "Free annual maintenance"
+        "Ultimate 7-stage whole-home system",
+        "36-month filter supply",
+        "Planet Hero Level 4 Elite status",
+        "5000 starter points + 3X multiplier",
+        "24/7 VIP concierge support",
+        "AI-powered smart home integration",
+        "Elite Hero platinum badges",
+        "Free annual maintenance & upgrades",
+        "Carbon footprint certificate"
       ],
-      badge: "🏆 ULTIMATE PROTECTION"
+      badge: "🏆 ULTIMATE HERO"
     }
   ];
 
@@ -109,7 +113,7 @@ export default function AquaCafe() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 px-4" data-testid="aquacafe-hero">
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-900/95 to-slate-800/90 backdrop-blur-sm" data-testid="aquacafe-hero">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center glass rounded-full px-6 py-3 mb-6 border border-hero-green-500/30">
             <Star className="w-5 h-5 text-amber-500 mr-2" />
@@ -152,11 +156,11 @@ export default function AquaCafe() {
       </section>
 
       {/* Product Features Grid */}
-      <section className="py-16 px-4" data-testid="product-features">
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-950/40 to-slate-900/60 backdrop-blur-sm" data-testid="product-features">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Why 12,000+ Dubai Families Choose AquaCafe</h2>
-            <p className="text-gray-300 text-lg">Premium filtration technology meets Dubai's water challenges</p>
+          <div className="text-center mb-12 bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+            <h2 className="text-3xl font-bold text-white mb-4 drop-shadow-md">Why 12,000+ Dubai Families Choose AquaCafe</h2>
+            <p className="text-gray-200 text-lg leading-relaxed">Premium filtration technology meets Dubai's water challenges</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -168,13 +172,13 @@ export default function AquaCafe() {
       </section>
 
       {/* Device Trade-In Section */}
-      <section className="py-16 px-4 bg-slate-800/50" data-testid="trade-in-section">
+      <section className="py-16 px-4 bg-gradient-to-br from-emerald-950/30 to-slate-800/70 backdrop-blur-sm border-y border-slate-700/50" data-testid="trade-in-section">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12 bg-slate-800/70 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-md">
               💰 INSTANT TRADE-IN VALUE CALCULATOR
             </h2>
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-100 text-lg leading-relaxed">
               See exactly how much your iPhone is worth towards your AquaCafe system
             </p>
           </div>
@@ -200,13 +204,13 @@ export default function AquaCafe() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-16 px-4" data-testid="pricing-plans">
+      <section className="py-16 px-4 bg-gradient-to-br from-amber-950/20 to-slate-900/80 backdrop-blur-sm" data-testid="pricing-plans">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12 bg-slate-800/70 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/30">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-md">
               🏆 CHOOSE YOUR HERO PACKAGE
             </h2>
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-100 text-lg leading-relaxed">
               Every package includes your iPhone trade-in value as instant credit
             </p>
             
@@ -228,8 +232,8 @@ export default function AquaCafe() {
               return (
                 <Card 
                   key={plan.id} 
-                  className={`relative glass border-slate-600 overflow-hidden ${
-                    plan.popular ? 'border-amber-500/50 scale-105' : ''
+                  className={`relative bg-gradient-to-br from-slate-800/90 to-slate-900/95 backdrop-blur-sm border-slate-600/70 overflow-hidden shadow-xl ${
+                    plan.popular ? 'border-amber-500/50 scale-105 ring-2 ring-amber-500/30' : ''
                   }`}
                   data-testid={`plan-${plan.id}`}
                 >
@@ -313,13 +317,13 @@ export default function AquaCafe() {
       <InstantImpactUnlocks calculation={calculation || undefined} onOrderNow={() => handleOrderNow(selectedPlan)} />
 
       {/* Partnership Programs */}
-      <section className="py-16 px-4" data-testid="partnership-programs">
+      <section className="py-16 px-4 bg-gradient-to-br from-purple-950/30 to-slate-900/70 backdrop-blur-sm border-y border-slate-700/50" data-testid="partnership-programs">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12 bg-slate-800/70 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-md">
               🤝 DeliWer Partnership Ecosystem
             </h2>
-            <p className="text-gray-300 text-lg">Join our sustainable trade network - Multiple partnership opportunities available</p>
+            <p className="text-gray-100 text-lg leading-relaxed">Join our sustainable trade network - Multiple partnership opportunities available</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -496,16 +500,16 @@ export default function AquaCafe() {
       </section>
 
       {/* Contact & Support Section */}
-      <section className="py-16 px-4 bg-slate-800/30" data-testid="contact-support">
+      <section className="py-16 px-4 bg-gradient-to-br from-indigo-950/40 to-slate-800/80 backdrop-blur-sm" data-testid="contact-support">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">24/7 Partner & Customer Support</h2>
-            <p className="text-gray-300">Multiple ways to get help, schedule deliveries, or join our partnership programs</p>
+          <div className="text-center mb-12 bg-slate-800/70 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
+            <h2 className="text-3xl font-bold text-white mb-4 drop-shadow-md">24/7 Partner & Customer Support</h2>
+            <p className="text-gray-100 leading-relaxed">Multiple ways to get help, schedule deliveries, or join our partnership programs</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="glass border-slate-600">
-              <CardContent className="p-6 bg-gradient-to-br from-slate-900/80 to-slate-800/90 backdrop-blur-sm text-center">
+            <Card className="bg-gradient-to-br from-slate-800/90 to-slate-900/95 backdrop-blur-sm border-slate-600/70 shadow-lg">
+              <CardContent className="p-6 bg-gradient-to-br from-slate-800/70 to-slate-900/80 backdrop-blur-sm text-center">
                 <Phone className="w-12 h-12 text-dubai-blue-500 mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-white mb-2">Emergency Support</h3>
                 <a href="tel:+971523946311" className="text-dubai-blue-500 hover:underline text-lg">
@@ -520,8 +524,8 @@ export default function AquaCafe() {
               </CardContent>
             </Card>
 
-            <Card className="glass border-slate-600">
-              <CardContent className="p-6 bg-gradient-to-br from-slate-900/80 to-slate-800/90 backdrop-blur-sm text-center">
+            <Card className="bg-gradient-to-br from-slate-800/90 to-slate-900/95 backdrop-blur-sm border-slate-600/70 shadow-lg">
+              <CardContent className="p-6 bg-gradient-to-br from-slate-800/70 to-slate-900/80 backdrop-blur-sm text-center">
                 <Mail className="w-12 h-12 text-hero-green-500 mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-white mb-2">Business Partnerships</h3>
                 <a href="mailto:partners@deliwer.com" className="text-hero-green-500 hover:underline text-lg">
@@ -536,8 +540,8 @@ export default function AquaCafe() {
               </CardContent>
             </Card>
 
-            <Card className="glass border-slate-600">
-              <CardContent className="p-6 bg-gradient-to-br from-slate-900/80 to-slate-800/90 backdrop-blur-sm text-center">
+            <Card className="bg-gradient-to-br from-slate-800/90 to-slate-900/95 backdrop-blur-sm border-slate-600/70 shadow-lg">
+              <CardContent className="p-6 bg-gradient-to-br from-slate-800/70 to-slate-900/80 backdrop-blur-sm text-center">
                 <MessageSquare className="w-12 h-12 text-amber-500 mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-white mb-2">WhatsApp Support</h3>
                 <a href="https://wa.me/971523946311" className="text-amber-500 hover:underline text-lg">
@@ -626,7 +630,7 @@ export default function AquaCafe() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 px-4" data-testid="final-cta">
+      <section className="py-16 px-4 bg-gradient-to-br from-orange-950/30 to-slate-900/90 backdrop-blur-sm border-t border-slate-700/50" data-testid="final-cta">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             🚀 JOIN 12,000+ DUBAI PLANET HEROES TODAY
