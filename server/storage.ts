@@ -469,37 +469,36 @@ export class MemStorage implements IStorage {
   }
 
   async createTradeIn(insertTradeIn: InsertTradeIn): Promise<TradeIn> {
-    const id = randomUUID();
-    const tradeIn: TradeIn = {
-      id,
-      ...insertTradeIn,
-      status: "pending",
-      completedAt: null,
-      createdAt: new Date(),
-    };
-    
-    this.tradeIns.set(id, tradeIn);
-    return tradeIn;
-  }
+  const id = randomUUID();
+  const tradeIn: TradeIn = {
+    id,
+    ...insertTradeIn,
+    status: "pending",
+    completedAt: null,
+    createdAt: new Date(),
+    pickupAddress: insertTradeIn.pickupAddress ?? null, // ensure always exists
+    pickupDate: insertTradeIn.pickupDate ?? null,       // ensure always exists
+  };
 
-  async getTradeInsByHero(heroId: string): Promise<TradeIn[]> {
-    return Array.from(this.tradeIns.values()).filter(tradeIn => tradeIn.heroId === heroId);
-  }
+  this.tradeIns.set(id, tradeIn);
+  return tradeIn;
+}
 
-  async updateTradeInStatus(id: string, status: string): Promise<TradeIn | undefined> {
-    const tradeIn = this.tradeIns.get(id);
-    if (!tradeIn) return undefined;
+async updateTradeInStatus(id: string, status: string): Promise<TradeIn | undefined> {
+  const tradeIn = this.tradeIns.get(id);
+  if (!tradeIn) return undefined;
 
-    const updatedTradeIn: TradeIn = {
-      ...tradeIn,
-      status,
-      completedAt: status === "completed" ? new Date() : tradeIn.completedAt,
-    };
+  const updatedTradeIn: TradeIn = {
+    ...tradeIn,
+    status,
+    completedAt: status === "completed" ? new Date() : tradeIn.completedAt,
+    pickupAddress: tradeIn.pickupAddress ?? null, // always defined
+    pickupDate: tradeIn.pickupDate ?? null,       // always defined
+  };
 
-    this.tradeIns.set(id, updatedTradeIn);
-    return updatedTradeIn;
-  }
-
+  this.tradeIns.set(id, updatedTradeIn);
+  return updatedTradeIn;
+}
   async getImpactStats(): Promise<ImpactStats> {
     return this.impactStats;
   }
