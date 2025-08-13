@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { HeroChallengeLanding } from "@/components/hero-challenge-landing";
 import { IPhone17Launch } from "@/components/iphone17-launch";
 import { InstantImpactUnlocks } from "@/components/instant-impact-unlocks";
@@ -5,7 +6,9 @@ import { ImpactSlotMachine } from "@/components/impact-slot-machine";
 import { LeaderboardWidget } from "@/components/leaderboard-widget";
 import { AIConcierge } from "@/components/ai-concierge";
 import { ImpactStats } from "@/components/impact-stats";
-import { Flame, Clock, TrendingUp } from "lucide-react";
+import { HeroOnboardingTutorial } from "@/components/hero-onboarding-tutorial";
+import { Flame, Clock, TrendingUp, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 function LiveChallengeWidget() {
   return (
@@ -64,8 +67,63 @@ function LiveChallengeWidget() {
 }
 
 export default function Home() {
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [hasSeenOnboarding, setHasSeenOnboarding] = useState(false);
+
+  // Check if user has seen onboarding before
+  useEffect(() => {
+    const seenOnboarding = localStorage.getItem('hero-onboarding-completed');
+    if (!seenOnboarding) {
+      // Show onboarding after a brief delay for better UX
+      const timer = setTimeout(() => {
+        setShowOnboarding(true);
+      }, 1500);
+      return () => clearTimeout(timer);
+    } else {
+      setHasSeenOnboarding(true);
+    }
+  }, []);
+
+  const handleOnboardingComplete = () => {
+    localStorage.setItem('hero-onboarding-completed', 'true');
+    setShowOnboarding(false);
+    setHasSeenOnboarding(true);
+  };
+
+  const handleOnboardingSkip = () => {
+    localStorage.setItem('hero-onboarding-completed', 'true');
+    setShowOnboarding(false);
+    setHasSeenOnboarding(true);
+  };
+
+  const handleRestartTutorial = () => {
+    setShowOnboarding(true);
+  };
+
   return (
     <div>
+      {/* Onboarding Tutorial */}
+      {showOnboarding && (
+        <HeroOnboardingTutorial 
+          onComplete={handleOnboardingComplete}
+          onSkip={handleOnboardingSkip}
+        />
+      )}
+
+      {/* Tutorial Restart Button (for returning users) */}
+      {hasSeenOnboarding && (
+        <div className="fixed bottom-6 right-6 z-30">
+          <Button
+            onClick={handleRestartTutorial}
+            className="bg-gradient-to-r from-emerald-500/90 to-blue-500/90 hover:from-emerald-600 hover:to-blue-600 text-white shadow-lg backdrop-blur-sm"
+            data-testid="restart-tutorial"
+          >
+            <Play className="w-4 h-4 mr-2" />
+            Tutorial
+          </Button>
+        </div>
+      )}
+
       {/* Enhanced Hero Challenge Landing */}
       <HeroChallengeLanding />
 
@@ -89,7 +147,7 @@ export default function Home() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            <LeaderboardWidget showHeader={false} />
+            <LeaderboardWidget showHeader={false} data-testid="leaderboard" />
             <LiveChallengeWidget />
           </div>
         </div>

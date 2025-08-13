@@ -224,7 +224,7 @@ export default function AquaCafe() {
             )}
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12" data-testid="aquacafe-packages">
             {plans.map((plan) => {
               const finalPrice = plan.price - (calculation?.tradeValue || 0);
               const savings = plan.originalPrice - plan.price + (calculation?.tradeValue || 0);
