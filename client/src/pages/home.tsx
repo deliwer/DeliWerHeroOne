@@ -1,4 +1,5 @@
 import { HeroChallengeLanding } from "@/components/hero-challenge-landing";
+import { IPhone17Launch } from "@/components/iphone17-launch";
 import { InstantImpactUnlocks } from "@/components/instant-impact-unlocks";
 import { ImpactSlotMachine } from "@/components/impact-slot-machine";
 import { LeaderboardWidget } from "@/components/leaderboard-widget";
@@ -67,6 +68,9 @@ export default function Home() {
     <div>
       {/* Enhanced Hero Challenge Landing */}
       <HeroChallengeLanding />
+
+      {/* iPhone 17 Launch Section */}
+      <IPhone17Launch />
 
       {/* Instant Impact Unlocks */}
       <InstantImpactUnlocks />
