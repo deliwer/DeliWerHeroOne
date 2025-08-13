@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DeviceSimulator } from "@/components/device-simulator";
 import { InstantImpactUnlocks } from "@/components/instant-impact-unlocks";
-import { Navigation } from "@/components/navigation";
 import type { TradeCalculation } from "@/types/hero";
 
 interface ProductFeatureProps {
@@ -109,8 +108,6 @@ export default function AquaCafe() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="py-20 px-4" data-testid="aquacafe-hero">
         <div className="max-w-7xl mx-auto text-center">
