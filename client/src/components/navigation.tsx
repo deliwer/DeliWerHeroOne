@@ -8,7 +8,6 @@ export function Navigation() {
     { path: "/", label: "Trade iPhone", id: "trade" },
     { path: "/products", label: "Shop", id: "products" },
     { path: "/aquacafe", label: "AquaCafe", id: "aquacafe" },
-    { path: "/leaderboard", label: "Heroes", id: "heroes" },
     { path: "/community", label: "Community", id: "community" },
     { path: "/partners", label: "Partners", id: "partners" },
     { path: "/delivery", label: "Delivery", id: "delivery" },
