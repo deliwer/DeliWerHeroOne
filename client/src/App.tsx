@@ -24,7 +24,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/leaderboard" component={Leaderboard} />
-      <Route path="/impact" component={ImpactDashboard} />
+      <Route path="/impact-dashboard" component={ImpactDashboard} />
       <Route path="/aquacafe" component={AquaCafe} />
       <Route path="/partners" component={Partners} />
       <Route path="/delivery" component={Delivery} />
