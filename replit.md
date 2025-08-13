@@ -8,9 +8,16 @@ DeliWer is a gamified environmental platform that allows users in Dubai to trade
 
 Preferred communication style: Simple, everyday language.
 
-## Recent Changes (August 12, 2025)
+## Recent Changes (August 13, 2025)
 
-### Comprehensive Platform Completion
+### Hero Package Pricing & UI Enhancement Update
+- **AquaCafe Hero Pricing**: Updated packages to start at AED 999 after discount for Heroes with three tiers: Hero Starter (AED 999), Hero Premium (AED 1,499), Hero Elite (AED 2,299)
+- **Visual Enhancement**: Added distinct background colors and improved contrast across all sections for better visibility
+- **Calculator Integration**: Replaced leaderboard with calculator output display in hero-challenge-landing component showing real-time trade valuation, environmental impact, and action buttons
+- **Card Design Updates**: Enhanced all cards with gradient backgrounds, shadows, and improved text readability
+- **Section Differentiation**: Each major section now has unique colored backgrounds (blue, emerald, amber, purple, indigo, orange gradients) for clear visual separation
+
+### Previous Platform Features (August 12, 2025)
 - **Footer Integration**: Added comprehensive footer with DeliWer ecosystem projects (AquaCafe, EcoTrade, Recycle, Dawn)
 - **Delivery Page**: Created complete delivery network page with Dubai zone coverage, live tracking, and eco-fleet features
 - **Community Hub**: Built Planet Heroes community with leaderboards, challenges, social features, and achievements

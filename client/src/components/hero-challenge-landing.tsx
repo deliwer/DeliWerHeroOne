@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Star, Clock, Users, Zap, Trophy, Target, Timer } from "lucide-react";
+import { Star, Clock, Users, Zap, Trophy, Target, Timer, Calculator, Smartphone, Leaf, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DeviceSimulator } from "./device-simulator";
-import { LeaderboardWidget } from "./leaderboard-widget";
 import { useImpactStats } from "@/hooks/use-impact-stats";
 import { Link } from "wouter";
 
@@ -168,16 +167,70 @@ export function HeroChallengeLanding() {
             <DeviceSimulator />
           </div>
           
-          {/* Leaderboard Preview */}
+          {/* Calculator Output Display */}
           <div>
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Trophy className="w-6 h-6 text-amber-500 mr-2" />
-                LIVE HERO LEADERBOARD
+                <Calculator className="w-6 h-6 text-hero-green-500 mr-2" />
+                YOUR TRADE CALCULATION
               </h2>
-              <p className="text-gray-300">See where you'll rank among Dubai's environmental champions</p>
+              <p className="text-gray-300">Real-time valuation based on your device selection</p>
             </div>
-            <LeaderboardWidget limit={5} showHeader={false} />
+            
+            <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/95 backdrop-blur-sm rounded-2xl p-6 border border-hero-green-500/30 shadow-xl">
+              <div className="space-y-4">
+                {/* Device Info Display */}
+                <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-xl">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex items-center justify-center mr-4">
+                      <Smartphone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-white font-bold">iPhone 13 Pro</div>
+                      <div className="text-gray-400 text-sm">Excellent Condition</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-hero-green-500">AED 1,200</div>
+                    <div className="text-gray-400 text-sm">Trade Value</div>
+                  </div>
+                </div>
+
+                {/* Impact Breakdown */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-amber-500/10 rounded-xl border border-amber-500/30">
+                    <div className="text-xl font-bold text-amber-500">+2,400</div>
+                    <div className="text-gray-300 text-sm">Planet Points</div>
+                  </div>
+                  <div className="text-center p-4 bg-hero-green-500/10 rounded-xl border border-hero-green-500/30">
+                    <div className="text-xl font-bold text-hero-green-500">18 Months</div>
+                    <div className="text-gray-300 text-sm">Water Protection</div>
+                  </div>
+                </div>
+
+                {/* Environmental Impact */}
+                <div className="p-4 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-xl border border-emerald-500/30">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Leaf className="w-5 h-5 text-emerald-500 mr-2" />
+                      <span className="text-white font-medium">Environmental Impact</span>
+                    </div>
+                    <div className="text-emerald-500 font-bold">-2.4 kg CO₂</div>
+                  </div>
+                  <div className="mt-2 text-gray-300 text-sm">
+                    Equal to removing 520 plastic bottles from waste
+                  </div>
+                </div>
+
+                {/* Action Button */}
+                <div className="pt-2">
+                  <Button className="w-full bg-gradient-to-r from-hero-green-500 to-emerald-600 hover:from-hero-green-600 hover:to-emerald-700 text-white py-3 font-bold rounded-xl">
+                    <ShoppingCart className="mr-2 w-5 h-5" />
+                    CONFIRM TRADE & ORDER AQUACAFE
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
